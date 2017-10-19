@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "Swiftline",
+        "repositoryURL": "https://github.com/nsomar/Swiftline.git",
+        "state": {
+          "branch": null,
+          "revision": "4f84dee14e47a69bfbea71a6dbba0ddc9fd9b66b",
+          "version": "0.5.0"
+        }
+      },
+      {
         "package": "xcproj",
         "repositoryURL": "https://github.com/xcodeswift/xcproj.git",
         "state": {

@@ -31,7 +31,7 @@ final class SplashService {
         static let launchStoryboardString = "\t<key>UILaunchStoryboardName</key>\n\t<string>LaunchScreen</string>\n"
     }
 
-    enum SplashType {
+    enum SplashType: String {
         case iPhone4s
         case iPhone5s
 
