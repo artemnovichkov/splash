@@ -16,7 +16,7 @@ Run `splash` in project directory and choose a layout.
  - [ ] Homebrew support
  - [ ] A command for cleaning: removing added files, return Splash Screen path
  - [ ] Xcode project cleaning like Cmd+Shift+K after execution
- - [ ] Using examples
+ - [ ] Examples of using in README
 
 ## Author
 

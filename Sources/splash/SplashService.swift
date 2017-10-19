@@ -31,9 +31,9 @@ final class SplashService {
         static let launchStoryboardString = "\t<key>UILaunchStoryboardName</key>\n\t<string>LaunchScreen</string>\n"
     }
 
-    enum SplashType: String {
-        case iPhone4s
-        case iPhone5s
+    enum Layout: String {
+        case iPhone4s = "320x480"
+        case iPhone5s = "320x568"
 
         var fileName: String {
             switch self {
@@ -45,14 +45,14 @@ final class SplashService {
         }
     }
 
-    func run(with type: SplashType) throws {
+    func run(with layout: Layout) throws {
         let currentFolder = FileSystem().currentFolder
         let projectFile = currentFolder.subfolders.first { $0.name.contains(Constants.projectExtension) }
         guard let unwrappedProjectFile = projectFile else {
             throw Error.missingProject
         }
 
-        let fileName = type.fileName
+        let fileName = layout.fileName
         try currentFolder.createFile(named: fileName)
 
         let projectPath = Path(unwrappedProjectFile.name)
