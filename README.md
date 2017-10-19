@@ -1,10 +1,12 @@
 # 🏊🏻 Splash
 
-Test different app layout with only one device.
+Test different app layouts with only one device.
 
-<img src=".github/example_iphone4.png" width="200" />
-<img src=".github/example_iphone5s.png" width="200" />
-<img src=".github/example_default.png" width="200" />
+<p align="center">
+<img src=".github/example_iphone4.png" width="250" />
+<img src=".github/example_iphone5s.png" width="250" />
+<img src=".github/example_default.png" width="250" />
+</p>
 
 ## Using
 
