@@ -58,13 +58,7 @@ final class SplashService {
             throw Error.missingProject
         }
 
-        let fileName = layout.fileName
-        try currentFolder.createFile(named: fileName)
-
-        let projectPath = Path(unwrappedProjectFile.name)
-        let project = try XcodeProj(path: projectPath)
-        try addImageFile(withName: fileName, to: project)
-        try project.write(path: projectPath, override: true)
+        let project = try XcodeProj(pathString: unwrappedProjectFile.name)
 
         let infoPath = try infoFilePath(from: project, forConfigurationName: "Debug")
         do {
@@ -75,6 +69,12 @@ final class SplashService {
         catch {
             throw Error.cannotReadInfo
         }
+
+        let fileName = layout.fileName
+        try currentFolder.createFile(named: fileName)
+        try addImageFile(withName: fileName, to: project)
+        let projectPath = Path(unwrappedProjectFile.name)
+        try project.write(path: projectPath, override: true)
     }
 
     private func addImageFile(withName name: String, to project: XcodeProj) throws {
@@ -91,7 +91,7 @@ final class SplashService {
     }
 
     private func infoFilePath(from project: XcodeProj, forConfigurationName configurationName: String) throws -> String {
-        let debugConfiguration = project.pbxproj.buildConfigurations.first { $0.name == configurationName }
+        let debugConfiguration = project.pbxproj.buildConfigurations.filter { $0.name == configurationName }.last
         guard let unwrappedDebugConfiguration = debugConfiguration else {
             throw Error.cannotFindConfiguration(name: configurationName)
         }
