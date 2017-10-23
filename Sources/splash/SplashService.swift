@@ -7,15 +7,15 @@ import xcproj
 import Files
 import PathKit
 
-final class SplashService {
+public final class SplashService {
 
-    enum Error: Swift.Error, LocalizedError {
+    public enum Error: Swift.Error, LocalizedError {
         case missingProject
         case cannotFindConfiguration(name: String)
         case cannotReadInfo
         case cannotFindRootGroup
 
-        var errorDescription: String? {
+        public var errorDescription: String? {
             switch self {
             case .missingProject: return "Can't find .xcodeproj in current directory."
             case let .cannotFindConfiguration(name: name): return "Can't find \(name) configuration in the project."
@@ -31,7 +31,7 @@ final class SplashService {
         static let launchStoryboardString = "\t<key>UILaunchStoryboardName</key>\n\t<string>LaunchScreen</string>\n"
     }
 
-    enum Layout: String {
+    public enum Layout: String {
         case iPhone4s = "320x480"
         case iPhone5s = "320x568"
 
@@ -47,11 +47,11 @@ final class SplashService {
 
     private let fileSystem: FileSystem
 
-    init(fileSystem: FileSystem = .init()) {
+    public init(fileSystem: FileSystem = .init()) {
         self.fileSystem = FileSystem()
     }
 
-    func run(with layout: Layout) throws {
+    public func run(with layout: Layout) throws {
         let currentFolder = fileSystem.currentFolder
         let projectFile = currentFolder.subfolders.first { $0.name.contains(Constants.projectExtension) }
         guard let unwrappedProjectFile = projectFile else {
