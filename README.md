@@ -2,8 +2,7 @@
 ![Swift 4](https://img.shields.io/badge/Swift-4-yellow.svg)
 ![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)
 ![Make](https://img.shields.io/badge/homebrew-compatible-brightgreen.svg?style=flat)
-<a href="https://dashboard.buddybuild.com/apps/59c146026a659c00011fc478/build/latest?branch=master">
-        <img src="https://dashboard.buddybuild.com/api/statusImage?appID=59c146026a659c00011fc478&branch=master&build=latest" />
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59ed8ff243aa2a0001c0ba1c&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59ed8ff243aa2a0001c0ba1c/build/latest?branch=master)
 
 Test different app layouts with only one device.
 
@@ -18,7 +17,7 @@ Test different app layouts with only one device.
 
 ## Using
 
-Run `splash` in a project directory and choose a layout. Don't forget to clean a project with Cmd+Shift+K to remove cached splash screens.
+Run `splash` in a project directory and choose a layout. Don't forget to clean a project with `Cmd+Shift+K` to remove cached splash screens.
 
 ## Installing
 
@@ -58,7 +57,7 @@ let package = Package(
 ## TODOs:
 
  - [ ] A command for cleaning: removing added files, return Splash Screen path
- - [ ] Xcode project cleaning like Cmd+Shift+K after execution
+ - [ ] Xcode project cleaning like `Cmd+Shift+K` after execution
 
 ## Author
 
