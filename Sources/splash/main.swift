@@ -2,7 +2,9 @@
 //  Copyright © 2017 Rosberry. All rights reserved.
 //
 
+import Foundation
 import Swiftline
+import SplashCore
 
 let splashService = SplashService()
 
