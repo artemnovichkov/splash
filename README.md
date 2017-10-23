@@ -17,6 +17,12 @@ Run `splash` in a project directory and choose a layout. Don't forget to clean a
 
 ## Installing
 
+### Homebrew (recommended):
+
+```bash
+$ brew install artemnovichkov/projects/splash
+```
+
 ### Make:
 
 ```bash
