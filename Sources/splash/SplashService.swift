@@ -45,8 +45,14 @@ final class SplashService {
         }
     }
 
+    private let fileSystem: FileSystem
+
+    init(fileSystem: FileSystem = .init()) {
+        self.fileSystem = FileSystem()
+    }
+
     func run(with layout: Layout) throws {
-        let currentFolder = FileSystem().currentFolder
+        let currentFolder = fileSystem.currentFolder
         let projectFile = currentFolder.subfolders.first { $0.name.contains(Constants.projectExtension) }
         guard let unwrappedProjectFile = projectFile else {
             throw Error.missingProject
