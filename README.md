@@ -1,7 +1,7 @@
 # 🏊🏻 Splash
 ![Swift 4](https://img.shields.io/badge/Swift-4-yellow.svg)
-![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)
-![Make](https://img.shields.io/badge/homebrew-compatible-brightgreen.svg?style=flat)
+[![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)](https://github.com/artemnovichkov/splash/blob/master/Package.swift)
+[![Make](https://img.shields.io/badge/homebrew-compatible-brightgreen.svg?style=flat)](https://github.com/artemnovichkov/homebrew-projects)
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59ed8ff243aa2a0001c0ba1c&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/59ed8ff243aa2a0001c0ba1c/build/latest?branch=master)
 
 Test different app layouts with only one device.
