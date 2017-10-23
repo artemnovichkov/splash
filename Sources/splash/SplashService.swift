@@ -17,10 +17,10 @@ final class SplashService {
 
         var errorDescription: String? {
             switch self {
-            case .missingProject: return ""
+            case .missingProject: return "Can't find .xcodeproj in current directory."
             case let .cannotFindConfiguration(name: name): return "Can't find \(name) configuration in the project."
-            case .cannotReadInfo: return ""
-            case .cannotFindRootGroup: return ""
+            case .cannotReadInfo: return "Can't read data from Info.plist"
+            case .cannotFindRootGroup: return "Can't find Root group in the project."
             }
         }
     }

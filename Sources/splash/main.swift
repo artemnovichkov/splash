@@ -12,7 +12,7 @@ do {
         layouts.forEach { type in settings.addChoice(type.rawValue) { return type } }
     }
     try splashService.run(with: layout)
-    print("🏄🏻 The project was successfully updated. Don't forget to remove a new files and return splash screen name before committing.")
+    print("🏄🏻 The project was successfully updated. Don't forget to discard all changes before committing.")
 }
 catch {
     print("❌ An error occurred:\n\(error.localizedDescription)")
