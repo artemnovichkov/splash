@@ -1,4 +1,9 @@
 # 🏊🏻 Splash
+![Swift 4](https://img.shields.io/badge/Swift-4-yellow.svg)
+![Swift Package Manager](https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat)
+![Make](https://img.shields.io/badge/homebrew-compatible-brightgreen.svg?style=flat)
+<a href="https://dashboard.buddybuild.com/apps/59c146026a659c00011fc478/build/latest?branch=master">
+        <img src="https://dashboard.buddybuild.com/api/statusImage?appID=59c146026a659c00011fc478&branch=master&build=latest" />
 
 Test different app layouts with only one device.
 
