@@ -57,7 +57,6 @@ let package = Package(
 ## TODOs:
 
  - [ ] A command for cleaning: removing added files, return Splash Screen path
- - [ ] Xcode project cleaning like `Cmd+Shift+K` after execution
 
 ## Author
 

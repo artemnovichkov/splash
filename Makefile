@@ -4,7 +4,7 @@ OS?=sierra
 PREFIX?=/usr/local
 PROJECT?=Splash
 RELEASE_BINARY_FOLDER?=$(BUILD_FOLDER)/release/$(PROJECT)
-VERSION?=1.0.0
+VERSION?=1.0.1
 
 build:
 	swift build --disable-sandbox -c release -Xswiftc -static-stdlib
