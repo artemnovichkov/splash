@@ -14,6 +14,7 @@ public final class SplashService {
         case cannotFindConfiguration(name: String)
         case cannotReadInfo
         case cannotFindRootGroup
+        case cannotFindDerivedData
 
         public var errorDescription: String? {
             switch self {
@@ -29,6 +30,7 @@ public final class SplashService {
         static let projectExtension = ".xcodeproj"
         static let reference = "06B7C9B61F9738E100DAB44D"
         static let launchStoryboardString = "\t<key>UILaunchStoryboardName</key>\n\t<string>LaunchScreen</string>\n"
+        static let derivedDataPath = "~/Library/Developer/Xcode/DerivedData"
     }
 
     public enum Layout: String {
@@ -75,6 +77,13 @@ public final class SplashService {
         try addImageFile(withName: fileName, to: project)
         let projectPath = Path(unwrappedProjectFile.name)
         try project.write(path: projectPath, override: true)
+
+        do {
+            try cleanBuildFolder(forProjectName: unwrappedProjectFile.name.replacingOccurrences(of: Constants.projectExtension, with: ""))
+        }
+        catch {
+            print("🤔 An error occurred during Build folder deleting. Please run Cmd+Shift+K manually.")
+        }
     }
 
     private func addImageFile(withName name: String, to project: XcodeProj) throws {
@@ -99,5 +108,14 @@ public final class SplashService {
             throw Error.cannotReadInfo
         }
         return infoFilePath
+    }
+
+    private func cleanBuildFolder(forProjectName projectName: String) throws {
+        let derivedDataFolder = try Folder(path: Constants.derivedDataPath)
+        let projectFolder = derivedDataFolder.subfolders.first { $0.name.contains(projectName) }
+        guard let unwrappedProjectFolder = projectFolder else {
+            throw Error.cannotFindDerivedData
+        }
+        try unwrappedProjectFolder.subfolder(named: "Build").delete()
     }
 }
