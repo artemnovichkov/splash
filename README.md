@@ -17,7 +17,7 @@ Test different app layouts with only one device.
 
 ## Using
 
-Run `splash` in a project directory and choose a layout. Don't forget to clean a project with `Cmd+Shift+K` to remove cached splash screens.
+Run `splash` in a project directory and choose a layout. Also Splash cleans Build folder to remove cached splash screens.
 
 ## Installing
 
