@@ -17,7 +17,7 @@ Test different app layouts with only one device.
 
 ## Using
 
-Run `splash` in a project directory and choose a layout. Don't forget to clean a project with Cmd+Shift+K to remove cached splash screens.
+Run `splash` in a project directory and choose a layout. Don't forget to clean a project with `Cmd+Shift+K` to remove cached splash screens.
 
 ## Installing
 
@@ -57,7 +57,7 @@ let package = Package(
 ## TODOs:
 
  - [ ] A command for cleaning: removing added files, return Splash Screen path
- - [ ] Xcode project cleaning like Cmd+Shift+K after execution
+ - [ ] Xcode project cleaning like `Cmd+Shift+K` after execution
 
 ## Author
 
