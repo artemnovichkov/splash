@@ -8,15 +8,47 @@ Test different app layouts with only one device.
 <img src=".github/example_default.png" width="250" />
 </p>
 
+## Features
+- Configuring Xcode project for different layouts
+
 ## Using
 
-Run `splash` in project directory and choose a layout.
+Run `splash` in a project directory and choose a layout. Don't forget to clean a project with Cmd+Shift+K to remove cached splash screens.
 
-## TODOS:
+## Installing
+
+### Make:
+
+```bash
+$ git clone https://github.com/artemnovichkov/splash.git
+$ cd splash
+$ make
+```
+
+### Swift Package Manager:
+
+```swift
+// swift-tools-version:4.0
+
+import PackageDescription
+
+let package = Package(
+    name: "Project",
+    dependencies: [
+    .package(url: "https://github.com/artemnovichkov/splash.git", from: "1.0.0"),
+        ],
+    targets: [
+        .target(
+            name: "Project", dependencies: ["splash"])
+    ]
+)
+```
+
+## TODOs:
+
  - [ ] Homebrew support
  - [ ] A command for cleaning: removing added files, return Splash Screen path
  - [ ] Xcode project cleaning like Cmd+Shift+K after execution
- - [ ] Examples of using in README
 
 ## Author
 
