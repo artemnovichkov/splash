@@ -22,6 +22,7 @@ public final class SplashService {
             case let .cannotFindConfiguration(name: name): return "Can't find \(name) configuration in the project."
             case .cannotReadInfo: return "Can't read data from Info.plist"
             case .cannotFindRootGroup: return "Can't find Root group in the project."
+            case .cannotFindDerivedData: return "Can't find Build folder for the project."
             }
         }
     }
