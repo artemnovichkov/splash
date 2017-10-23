@@ -46,7 +46,6 @@ let package = Package(
 
 ## TODOs:
 
- - [ ] Homebrew support
  - [ ] A command for cleaning: removing added files, return Splash Screen path
  - [ ] Xcode project cleaning like Cmd+Shift+K after execution
 
